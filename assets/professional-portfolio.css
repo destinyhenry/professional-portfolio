@@ -11,18 +11,18 @@
   header {
     padding: 40px;
     text-align: center;
-    background: rgb(189, 22, 144);
-    color: rgb(51, 218, 207);
+    background: rgb(255, 255, 255);
+    color: rgb(119, 219, 230);
     border: double;
   }
   
   nav {
     display: flex;
-    background-color: #973edf;
+    background-color:rgb(111, 127, 129)
   }
   
   nav a {
-    color: #13293d;
+    color:rgb(174, 190, 192);
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
@@ -32,13 +32,15 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    text-align: center;
   }
 
   aside {
     order: 2;
-    background-color: #49c947;
+    background-color: #abd4e4c0;
     padding: 20px;
     align-items: center;
+    align-content: center;
   }
   
   section-a {
@@ -49,7 +51,7 @@
   }
   
   #section-a:hover {
-    background: lavender;
+    background:rgb(198, 238, 243);
   }
 
   section-b {
@@ -60,20 +62,9 @@
   }
 
   #section-b:hover {
-    background: lavender;
+    background:rgb(198, 238, 243);
   }
 
-  section-c {
-    
-    flex: 3;
-    background-color: whitesmoke;
-    padding: 20px;
-    margin-inline-end: 0px;
-
-  }
-  #section-c:hover {
-   background: lavender;
-  }
   
   .sample-img {
     background-color: #fff;
@@ -86,7 +77,7 @@
   footer {
     padding: 20px;
     text-align: center;
-    background: #13293d;
+    background:rgb(111, 127, 129);
     color: #fff;
   }
   
