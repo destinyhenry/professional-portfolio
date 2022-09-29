@@ -9,7 +9,7 @@ box-sizing: border-box;
     --ff-secondary: monospace;
 
     --fw-reg: 300;
-    --fw-bold: 300;
+    --fw-bold: 900;
 
     --clr-light: #fff;
     --clr-dark: #303030;
@@ -20,8 +20,8 @@ box-sizing: border-box;
     --fs-h3: 1.25;
     --fs-body: 1rem;
 
-    --bs: 0.25em  0.25em 0.75em rgba(0,0,0,0.25),
-            0.125em, 0.125em, 0.25em rgba(0,0,0,0.15);
+    --bs: 0.25em  0.25em 0.75em rgba(0,0,0,.25),
+            0.125em 0.125em 0.25em rgba(0,0,0,.15);
 
 }
 
@@ -30,7 +30,7 @@ box-sizing: border-box;
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
-        --fs-body: 1.25rem;   
+        --fs-body: 1.125rem;   
     }
     
 }
@@ -54,12 +54,39 @@ img{
     max-width: 100%;
 }
 
-/* Typography */
+strong { font-weight: var(--fw-bold); }
 
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+/* Typography */
 h1,
 h2,
 h3 {
-    line-height: 1;
+    line-height: 1.1;
     margin:0;
 }
 
@@ -68,7 +95,7 @@ h2 {font-size: var(--fs-h2);}
 h3 {font-size: var(--fs-h3);}
 
 .section-title {
-    margin-bottom: .25m;
+    margin-bottom: .25em;
 }
 
 .section-subtitle--intro {
@@ -119,8 +146,9 @@ header {
     }
 
     .section-subtitle--intro {
+        display: inline-block;
         align-self: start;
-        grid-column: -1 1;
+        grid-column: -1 / 1;
         grid-row: 2;
         text-align: right;
         position: relative;
@@ -131,10 +159,10 @@ header {
 /* my services section */
 .my-services {
     background-color: var(--clr-dark);
-    background-image: url(https://drive.google.com/file/d/1EjSviperF93ARc3dhmiNPyCiflxRZUdY/view?usp=sharing);
+    background-image: url(https://lh3.googleusercontent.com/tPiiWEx_jTeewiXklYJrUMkdaQ4SSAceZvvrVi1xh8HCdI8LLnLSIlwb5sUzwKmxui9j-4X8RVZ5FUjkoCG3ZzZuVGFj4cI_YqPxFuSz_OjnHj3Jy-4QbAgxSgD3FQX17TW4ooX6szZXssU1rzeJf3lweg5a6PAqV1T9R7wpAOOrKmkO3_fRLOd4Wfm0o9sWRz3pjWLZV_ckxHbntvWGDcabTd3MdF5qpeUlzW-TQgDL9HI5Z6Y2IIy9gPTMl6H5kvh8zbZx_Rxz3fE-8jPvrGjFBbRz22zLpNtPyYgLEol1aBmoSEz__sz2APy5QckojZd0FJqyCK2V2-qri29TA05xA7EBP8urpFNol_PtUZmPqGcutFl4hRyR0yRtPch2iOZW2k49CMVTDE03hkrffw80S8f-Yp0bL1ERY0Squ3uQafH5eMxLWHsIrfRCRA1LG79YvuRzKKl1f-mx__z_YR1YRnPVEdkGrRMGaX3sGlkq2gLF5E9yVDS-8WsCRrU5AbQzQvR3rZ5r1o2Dou-Gp0BsbU6Qb2zrsD-MP_InO8j4FvhsD0ULH2PEuPRppwzabew8ZCZFUaNMN6vDbaz1nXmOchsZTYaXR_ubDAf4UcyFYn1HQXZqeP4Q131N-mXs9Q-jA9-MdCVacDPwMFfqWFgcyW5BoRBnXlQfTHBAvEe_saMr_YNoZASpQXV7jPNY4UpM5Sy8QGsGFVvc0f6b_nzY2eqyJfzpKe8ZdlkTKdWKTM_1LleF7z78ClGMkQ=s616-no?authuser=0);
     background-size: cover;
-    /* background blend */
-    color: var(--clr-light);
+    background-blend-mode: multiply;
+    color: var(--clr-accent);
     text-align: center;
 }
 
@@ -153,10 +181,18 @@ header {
     opacity: 0.25;
 }
 
+.services {
+    margin-bottom: 4em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 @media (min-width:800px) {
-    .services{
-        display: flex;
-        margin-left: 1000px;
+    .services {
+        margin-left: 0 auto;
         margin-right: 0 auto ;
     }
 
